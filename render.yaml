@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: scoresense-web
+    runtime: node
+    buildCommand: npm install --legacy-peer-deps && npm run build
+    startCommand: npm run preview
+    envVars:
+      - key: NODE_ENV
+        value: production
